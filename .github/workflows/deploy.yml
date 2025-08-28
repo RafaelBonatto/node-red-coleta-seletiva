@@ -1,0 +1,24 @@
+name: Deploy Node-RED Flow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Enviar fluxo para Node-RED
+        run: |
+          curl -X POST http://$NODE_RED_HOST:1880/flows \
+          -H "Content-Type: application/json" \
+          -H "Node-RED-Deployment-Type: full" \
+          -H "Authorization: Bearer $NODE_RED_TOKEN" \
+          --data-binary @flows.json
+        env:
+          NODE_RED_HOST: ${{ secrets.NODE_RED_HOST }}
+          NODE_RED_TOKEN: ${{ secrets.NODE_RED_TOKEN }}
