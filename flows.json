@@ -1,0 +1,577 @@
+[
+    {
+        "id": "e0dfb35bea34b5fc",
+        "type": "tab",
+        "label": "Flow 10",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ae48e10bbb7d40ec",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "8502df33fc05d41e",
+        "type": "function",
+        "z": "e0dfb35bea34b5fc",
+        "name": "function 3",
+        "func": "//recebe o bit ativo e retorna uma dint\nfunction setBit(bitIndex){\n    let dint;\n    //verifica se o indece do bit é valido 0-31\n    if(bitIndex < 0 || bitIndex > 31){\n        node.warn(\"Bit fora do range\");\n    }\n    \n    else{\n    //ativa o bit e retorna dint\n    return dint|(1 << bitIndex);\n    }\n}\n\n\nmsg.payload = setBit(msg.payload);\n\n//return msg;\n    \nreturn msg.payload != undefined ? msg: msg[null]\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "f29c177c941b30cf"
+            ]
+        ]
+    },
+    {
+        "id": "f29c177c941b30cf",
+        "type": "debug",
+        "z": "e0dfb35bea34b5fc",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d43e55127b028f46",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "8c28f1238218de10",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 390,
+        "y": 320,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "1979f46046f18121",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "f3e22091cbcc71c7",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 390,
+        "y": 400,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "4467edbe48f3c2b4",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "7",
+        "payloadType": "num",
+        "x": 390,
+        "y": 440,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "5ac4ee08ce7c6058",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "11",
+        "payloadType": "num",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "8c41125b15a758eb",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "12",
+        "payloadType": "num",
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "6fa41e61d7c022d3",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "14",
+        "payloadType": "num",
+        "x": 370,
+        "y": 600,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "3148b86bf41c6fc7",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "32",
+        "payloadType": "num",
+        "x": 370,
+        "y": 640,
+        "wires": [
+            [
+                "8502df33fc05d41e"
+            ]
+        ]
+    },
+    {
+        "id": "3e0215fa276f5b60",
+        "type": "ui_template",
+        "z": "e0dfb35bea34b5fc",
+        "d": true,
+        "group": "1475b9a1c42b1155",
+        "name": "",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n  .form-container {\n    font-family: Arial, sans-serif;\n    background-color: #f4f4f4;\n    padding: 20px;\n    border-radius: 10px;\n    max-width: 500px;\n    margin: auto;\n  }\n  .form-container h2 {\n    text-align: center;\n    color: #2d2d2d;\n  }\n  .form-field {\n    margin-bottom: 15px;\n  }\n  .form-field label {\n    display: block;\n    margin-bottom: 5px;\n  }\n  .form-field input,\n  .form-field select,\n  .form-field textarea {\n    width: 100%;\n    padding: 10px;\n    border: 1px solid #ccc;\n    border-radius: 5px;\n  }\n  .form-field button {\n    width: 100%;\n    padding: 12px;\n    background-color: #4CAF50;\n    color: white;\n    border: none;\n    border-radius: 5px;\n    font-size: 16px;\n    cursor: pointer;\n  }\n  .form-field button:hover {\n    background-color: #45a049;\n  }\n  .confirmation {\n    margin-top: 20px;\n    padding: 10px;\n    background-color: #e7f4e4;\n    border-left: 5px solid #4CAF50;\n    display: none;\n  }\n</style>\n\n<div class=\"form-container\">\n  <h2>Informe os Dados para Coleta Seletiva</h2>\n  <div class=\"form-field\">\n    <label>Nome completo:</label>\n    <input type=\"text\" id=\"nome\" required>\n  </div>\n  <div class=\"form-field\">\n    <label>Telefone:</label>\n    <input type=\"text\" id=\"telefone\" required>\n  </div>\n  <div class=\"form-field\">\n    <label>Endereço:</label>\n    <input type=\"text\" id=\"endereco\" required>\n  </div>\n  <div class=\"form-field\">\n    <label>Tipo de resíduo:</label>\n    <select id=\"residuo\">\n      <option value=\"Eletrônicos\">Eletrônicos</option>\n      <option value=\"Plásticos\">Plásticos</option>\n      <option value=\"Papel\">Papel</option>\n      <option value=\"Metal\">Metal</option>\n      <option value=\"Outro\">Outro</option>\n    </select>\n  </div>\n  <div class=\"form-field\">\n    <label>Observações:</label>\n    <textarea id=\"observacoes\" rows=\"3\"></textarea>\n  </div>\n  <div class=\"form-field\">\n    <button onclick=\"enviarFormulario()\">Enviar</button>\n  </div>\n  <div class=\"confirmation\" id=\"confirmacao\"></div>\n</div>\n\n<script>\n(function(scope) {\n  function enviarFormulario() {\n    const nome = document.getElementById('nome').value;\n    const telefone = document.getElementById('telefone').value;\n    const endereco = document.getElementById('endereco').value;\n    const residuo = document.getElementById('residuo').value;\n    const observacoes = document.getElementById('observacoes').value;\n\n    if (!nome || !telefone || !endereco) {\n      alert(\"Por favor, preencha todos os campos obrigatórios.\");\n      return;\n    }\n\n    // Obter localização via geolocation\n    if (navigator.geolocation) {\n      navigator.geolocation.getCurrentPosition(function(position) {\n        const lat = position.coords.latitude;\n        const lon = position.coords.longitude;\n\n        const dados = {\n          payload: {\n            nome,\n            telefone,\n            endereco,\n            residuo,\n            observacoes,\n            localizacao: {\n              latitude: lat,\n              longitude: lon\n            }\n          }\n        };\n\n        scope.send(dados);\n\n        document.getElementById('confirmacao').innerHTML =\n          `<strong>Confirmação de Coleta:</strong><br>\n          Nome: ${nome}<br>\n          Telefone: ${telefone}<br>\n          Endereço: ${endereco}<br>\n          Tipo de resíduo: ${residuo}<br>\n          Observações: ${observacoes}<br>\n          Localização: Latitude ${lat}, Longitude ${lon}<br><br>\n          <em>Obrigado por contribuir para a proteção do meio ambiente!</em>`;\n        document.getElementById('confirmacao').style.display = 'block';\n      }, function(error) {\n        alert(\"Erro ao obter localização: \" + error.message);\n      });\n    } else {\n      alert(\"Geolocalização não suportada pelo navegador.\");\n    }\n  }\n\n  // Deixa a função acessível\n  scope.enviarFormulario = enviarFormulario;\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 100,
+        "wires": [
+            [
+                "961337da54b5d80a"
+            ]
+        ]
+    },
+    {
+        "id": "961337da54b5d80a",
+        "type": "debug",
+        "z": "e0dfb35bea34b5fc",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "146c0973700ca672",
+        "type": "inject",
+        "z": "e0dfb35bea34b5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 700,
+        "y": 160,
+        "wires": [
+            [
+                "67605cb1a10cec04"
+            ]
+        ]
+    },
+    {
+        "id": "67605cb1a10cec04",
+        "type": "function",
+        "z": "e0dfb35bea34b5fc",
+        "name": "function 4",
+        "func": "var keys = global.keys();\nfor(var i=0;i<keys.length; i++){\n    node.warn(keys[i])\n    global.set(keys[i]);\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a1e10c4faafc13a",
+        "type": "ui_template",
+        "z": "e0dfb35bea34b5fc",
+        "group": "bd92aa2a4df4b6a1",
+        "name": "Formulário Coleta Seletiva",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "format": "<style>\n  .form-container {\n    font-family: Arial, sans-serif;\n    max-width: 500px;\n    margin: auto;\n    background: #f9f9f9;\n    padding: 20px;\n    border-radius: 10px;\n    box-shadow: 0 0 10px rgba(0,0,0,0.2);\n  }\n\n  .form-container h3 {\n    text-align: center;\n    color: #2c3e50;\n  }\n\n  .form-group {\n    margin-bottom: 15px;\n  }\n\n  label {\n    display: block;\n    margin-bottom: 5px;\n    font-weight: bold;\n  }\n\n  input, select, textarea, button {\n    width: 100%;\n    padding: 10px;\n    box-sizing: border-box;\n    border-radius: 5px;\n    border: 1px solid #ccc;\n  }\n\n  button {\n    background-color: #27ae60;\n    color: white;\n    font-weight: bold;\n    cursor: pointer;\n    transition: background 0.3s ease;\n  }\n\n  button:hover {\n    background-color: #219150;\n  }\n\n  #resultado {\n    margin-top: 20px;\n    background: #ecf0f1;\n    padding: 15px;\n    border-radius: 8px;\n    color: #2c3e50;\n  }\n</style>\n\n<div class=\"form-container\">\n  <h3>Informe os Dados para Coleta Seletiva</h3>\n  <div class=\"form-group\">\n    <label>Nome completo:</label>\n    <input type=\"text\" id=\"nome\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label>Telefone:</label>\n    <input type=\"tel\" id=\"telefone\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label>Endereço:</label>\n    <input type=\"text\" id=\"endereco\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label>Tipo de Resíduo:</label>\n    <select id=\"residuo\">\n      <option value=\"\">Selecione</option>\n      <option>Plástico</option>\n      <option>Papel</option>\n      <option>Metal</option>\n      <option>Vidro</option>\n      <option>Orgânico</option>\n      <option>Eletrônico</option>\n    </select>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Observações:</label>\n    <textarea id=\"observacao\" rows=\"3\"></textarea>\n  </div>\n\n  <button onclick=\"enviar()\">Enviar</button>\n\n  <div id=\"resultado\"></div>\n</div>\n\n<script>\n(function(scope) {\n  function enviar() {\n    const nome = document.getElementById(\"nome\").value.trim();\n    const telefone = document.getElementById(\"telefone\").value.trim();\n    const endereco = document.getElementById(\"endereco\").value.trim();\n    const residuo = document.getElementById(\"residuo\").value;\n    const observacao = document.getElementById(\"observacao\").value.trim();\n    const resultado = document.getElementById(\"resultado\");\n\n    if (!nome || !telefone || !endereco || !residuo) {\n      resultado.innerHTML = \"<strong style='color:red;'>Por favor, preencha todos os campos obrigatórios.</strong>\";\n      return;\n    }\n\n    resultado.innerHTML = \"Capturando localização...\";\n\n    if (navigator.geolocation) {\n      navigator.geolocation.getCurrentPosition(function(pos) {\n        const latitude = pos.coords.latitude;\n        const longitude = pos.coords.longitude;\n\n        const dados = {\n          nome,\n          telefone,\n          endereco,\n          residuo,\n          observacao,\n          latitude,\n          longitude\n        };\n\n        resultado.innerHTML = `\n          <h4>Confirmando Coleta:</h4>\n          <p><strong>Nome:</strong> ${nome}</p>\n          <p><strong>Telefone:</strong> ${telefone}</p>\n          <p><strong>Endereço:</strong> ${endereco}</p>\n          <p><strong>Tipo de Resíduo:</strong> ${residuo}</p>\n          <p><strong>Observação:</strong> ${observacao || 'Nenhuma'}</p>\n          <p><strong>Localização:</strong> Latitude: ${latitude}, Longitude: ${longitude}</p>\n          <p style=\"color: green; font-weight: bold;\">Obrigado por contribuir para a proteção do meio ambiente!</p>\n        `;\n\n        scope.send({ payload: dados });\n      }, function(err) {\n        resultado.innerHTML = \"<strong style='color:red;'>Não foi possível obter sua localização.</strong>\";\n      });\n    } else {\n      resultado.innerHTML = \"<strong style='color:red;'>Geolocalização não é suportada neste navegador.</strong>\";\n    }\n  }\n\n  scope.enviar = enviar;\n})(scope);\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 800,
+        "wires": [
+            [
+                "5293d2ff0176fdd8",
+                "42331bc96780735c"
+            ]
+        ]
+    },
+    {
+        "id": "5293d2ff0176fdd8",
+        "type": "function",
+        "z": "e0dfb35bea34b5fc",
+        "name": "Montar URL Nominatim",
+        "func": "const lat = msg.payload.latitude;\nconst lon = msg.payload.longitude;\n\nmsg.url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}&zoom=18&addressdetails=1`;\nmsg.savedData = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 840,
+        "wires": [
+            [
+                "f2f5bb4cf9f244a5"
+            ]
+        ]
+    },
+    {
+        "id": "f2f5bb4cf9f244a5",
+        "type": "http request",
+        "z": "e0dfb35bea34b5fc",
+        "name": "Chamada Nominatim",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 640,
+        "y": 840,
+        "wires": [
+            [
+                "872cb8efb8bbfdb0"
+            ]
+        ]
+    },
+    {
+        "id": "872cb8efb8bbfdb0",
+        "type": "function",
+        "z": "e0dfb35bea34b5fc",
+        "name": "Montar resposta final",
+        "func": "const enderecoCompleto = msg.payload.display_name;\nconst dados = msg.savedData;\n\nmsg.payload = {\n  nome: dados.nome,\n  telefone: dados.telefone,\n  endereco: dados.endereco,\n  tipo_residuo: dados.residuo,\n  observacao: dados.observacao,\n  latitude: dados.latitude,\n  longitude: dados.longitude,\n  endereco_geolocalizado: enderecoCompleto,\n  mensagem: \"Obrigado por contribuir para a proteção do meio ambiente!\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 800,
+        "wires": [
+            [
+                "e5aaf862b70cb8cc"
+            ]
+        ]
+    },
+    {
+        "id": "e5aaf862b70cb8cc",
+        "type": "debug",
+        "z": "e0dfb35bea34b5fc",
+        "name": "Resultado Final",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "42331bc96780735c",
+        "type": "debug",
+        "z": "e0dfb35bea34b5fc",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "1475b9a1c42b1155",
+        "type": "ui_group",
+        "name": "teste",
+        "tab": "4b6e3c772ac8c589",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bd92aa2a4df4b6a1",
+        "type": "ui_group",
+        "name": "Coleta Seletiva",
+        "tab": "f18a2699a1d7f99b",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "4b6e3c772ac8c589",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f18a2699a1d7f99b",
+        "type": "ui_tab",
+        "name": "Coleta Seletiva",
+        "icon": "recycle",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
