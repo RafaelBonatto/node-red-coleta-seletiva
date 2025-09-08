@@ -1,5 +1,5 @@
 {
-    "name": "node-red-coleta-seletiva_NR",
+    "name": "node-red-coleta-seletiva",
     "description": "projeto coleta seletiva",
     "version": "0.0.1",
     "dependencies": {},
