@@ -609,8 +609,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
-        "y": 160,
+        "x": 260,
+        "y": 240,
         "wires": [
             [
                 "e5aaf862b70cb8cc"
@@ -628,7 +628,7 @@
         "tostatus": false,
         "statusVal": "",
         "statusType": "auto",
-        "x": 500,
+        "x": 480,
         "y": 240,
         "wires": []
     },
@@ -644,8 +644,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 120,
+        "x": 460,
+        "y": 160,
         "wires": []
     }
 ]
