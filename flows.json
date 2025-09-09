@@ -628,8 +628,8 @@
         "tostatus": false,
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 400,
+        "x": 500,
+        "y": 240,
         "wires": []
     },
     {
@@ -644,8 +644,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 360,
+        "x": 560,
+        "y": 120,
         "wires": []
     }
 ]

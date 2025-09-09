@@ -205,17 +205,6 @@
         }
     },
     {
-        "id": "1475b9a1c42b1155",
-        "type": "ui_group",
-        "name": "teste",
-        "tab": "4b6e3c772ac8c589",
-        "order": 1,
-        "disp": true,
-        "width": "14",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "4b6e3c772ac8c589",
         "type": "ui_tab",
         "name": "Home",
@@ -306,6 +295,32 @@
         }
     },
     {
+        "id": "9f1531f58de5b4e4",
+        "type": "ui-base",
+        "name": "UI Name",
+        "path": "/dashboard"
+    },
+    {
+        "id": "f18a2699a1d7f99b",
+        "type": "ui_tab",
+        "name": "Coleta Seletiva",
+        "icon": "recycle",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1475b9a1c42b1155",
+        "type": "ui_group",
+        "name": "teste",
+        "tab": "4b6e3c772ac8c589",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "e3119d3ecdda2ec7",
         "type": "ui-page",
         "name": "Page Name",
@@ -316,12 +331,6 @@
         "order": -1
     },
     {
-        "id": "9f1531f58de5b4e4",
-        "type": "ui-base",
-        "name": "UI Name",
-        "path": "/dashboard"
-    },
-    {
         "id": "bd92aa2a4df4b6a1",
         "type": "ui_group",
         "name": "Coleta Seletiva",
@@ -330,15 +339,6 @@
         "disp": true,
         "width": "12",
         "collapse": false
-    },
-    {
-        "id": "f18a2699a1d7f99b",
-        "type": "ui_tab",
-        "name": "Coleta Seletiva",
-        "icon": "recycle",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "106ffc63.d55bc4",
@@ -628,8 +628,8 @@
         "tostatus": false,
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
-        "y": 160,
+        "x": 820,
+        "y": 400,
         "wires": []
     },
     {
@@ -644,8 +644,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 760,
-        "y": 120,
+        "x": 820,
+        "y": 360,
         "wires": []
     }
 ]
