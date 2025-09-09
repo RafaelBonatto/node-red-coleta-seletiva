@@ -2,7 +2,7 @@
     {
         "id": "e0dfb35bea34b5fc",
         "type": "tab",
-        "label": "Flow 10",
+        "label": "Coleta Seletiva",
         "disabled": false,
         "info": "",
         "env": []
@@ -461,7 +461,7 @@
         "templateScope": "local",
         "className": "",
         "x": 220,
-        "y": 100,
+        "y": 300,
         "wires": [
             [
                 "961337da54b5d80a"
@@ -482,7 +482,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 380,
-        "y": 100,
+        "y": 300,
         "wires": []
     },
     {
@@ -507,7 +507,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 220,
-        "y": 60,
+        "y": 260,
         "wires": [
             [
                 "67605cb1a10cec04"
@@ -526,7 +526,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 60,
+        "y": 260,
         "wires": [
             []
         ]
@@ -547,7 +547,7 @@
         "templateScope": "local",
         "className": "",
         "x": 240,
-        "y": 160,
+        "y": 360,
         "wires": [
             [
                 "5293d2ff0176fdd8",
@@ -567,7 +567,7 @@
         "finalize": "",
         "libs": [],
         "x": 250,
-        "y": 200,
+        "y": 400,
         "wires": [
             [
                 "f2f5bb4cf9f244a5"
@@ -591,7 +591,7 @@
         "senderr": false,
         "headers": [],
         "x": 500,
-        "y": 200,
+        "y": 400,
         "wires": [
             [
                 "872cb8efb8bbfdb0"
@@ -610,7 +610,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 240,
+        "y": 440,
         "wires": [
             [
                 "e5aaf862b70cb8cc"
@@ -629,7 +629,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 480,
-        "y": 240,
+        "y": 440,
         "wires": []
     },
     {
@@ -645,7 +645,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 460,
-        "y": 160,
+        "y": 360,
         "wires": []
     }
 ]
