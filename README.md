@@ -1,1 +1,1 @@
-teste de texto
+Projeto da coleta seletiva - Atividade Extensionista III
